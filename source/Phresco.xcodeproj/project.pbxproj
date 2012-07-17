@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25829C821506346F00504431 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 25829C811506346F00504431 /* www */; };
 		2596504114FB84E0002DF177 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2596504014FB84E0002DF177 /* Foundation.framework */; };
 		2596504314FB84E0002DF177 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2596504214FB84E0002DF177 /* UIKit.framework */; };
 		2596504514FB84E0002DF177 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2596504414FB84E0002DF177 /* CoreGraphics.framework */; };
@@ -32,10 +31,10 @@
 		2596509114FB8710002DF177 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 2596508E14FB8710002DF177 /* icon-72.png */; };
 		2596509214FB8710002DF177 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2596508F14FB8710002DF177 /* icon.png */; };
 		2596509314FB8710002DF177 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2596509014FB8710002DF177 /* icon@2x.png */; };
+		C38821C115AFF92900B2C141 /* ConfigurationReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C38821C015AFF92900B2C141 /* ConfigurationReader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25829C811506346F00504431 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		2596503C14FB84E0002DF177 /* Phresco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phresco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2596504014FB84E0002DF177 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2596504214FB84E0002DF177 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -65,6 +64,8 @@
 		2596508E14FB8710002DF177 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		2596508F14FB8710002DF177 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		2596509014FB8710002DF177 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		C38821BF15AFF92900B2C141 /* ConfigurationReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationReader.h; sourceTree = "<group>"; };
+		C38821C015AFF92900B2C141 /* ConfigurationReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +140,7 @@
 		2596505A14FB84E0002DF177 /* Phresco */ = {
 			isa = PBXGroup;
 			children = (
-				25829C811506346F00504431 /* www */,
+				C38821BE15AFF92800B2C141 /* ConfigurationReader */,
 				2596506314FB84E1002DF177 /* PhoneGap.framework */,
 				2596506514FB84E1002DF177 /* Resources */,
 				2596507E14FB84E1002DF177 /* Classes */,
@@ -215,6 +216,15 @@
 			path = icons;
 			sourceTree = "<group>";
 		};
+		C38821BE15AFF92800B2C141 /* ConfigurationReader */ = {
+			isa = PBXGroup;
+			children = (
+				C38821BF15AFF92900B2C141 /* ConfigurationReader.h */,
+				C38821C015AFF92900B2C141 /* ConfigurationReader.m */,
+			);
+			path = ConfigurationReader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,7 +288,6 @@
 				2596509114FB8710002DF177 /* icon-72.png in Resources */,
 				2596509214FB8710002DF177 /* icon.png in Resources */,
 				2596509314FB8710002DF177 /* icon@2x.png in Resources */,
-				25829C821506346F00504431 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +316,7 @@
 			files = (
 				2596506114FB84E1002DF177 /* main.m in Sources */,
 				2596508114FB84E1002DF177 /* AppDelegate.m in Sources */,
+				C38821C115AFF92900B2C141 /* ConfigurationReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Phresco/Phresco-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -426,6 +437,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Phresco/Phresco-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
