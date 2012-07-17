@@ -27,14 +27,20 @@
 
 #import <UIKit/UIKit.h>
 #ifdef PHONEGAP_FRAMEWORK
-	#import <PhoneGap/PhoneGapDelegate.h>
+#import <PhoneGap/PhoneGapDelegate.h>
+#import <PhoneGap/Reachability.h>
 #else
-	#import "PhoneGapDelegate.h"
+#import "PhoneGapDelegate.h"
 #endif
 
 @interface AppDelegate : PhoneGapDelegate {
-
+    
 	NSString* invokeString;
+    Reachability *internetReachable;
+    Reachability *hostReachable;
+    Reachability* hostReach;
+    Reachability* internetReach;
+    Reachability* wifiReach;
 }
 
 // invoke string is passed to your app on launch, this is only valid if you 
@@ -42,7 +48,10 @@
 // a simple tutorial can be found here : 
 // http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 
+NSString *urlString;
+
 @property (copy)  NSString* invokeString;
 
+-(void) urlParsing;
 @end
 
