@@ -48,10 +48,8 @@
 // a simple tutorial can be found here : 
 // http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 
-NSString *urlString;
-
 @property (copy)  NSString* invokeString;
-
+NSString*  urlString;
 -(void) urlParsing;
 @end
 
